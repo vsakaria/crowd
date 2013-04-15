@@ -1,6 +1,6 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   # ...
-  provider :identity, :model => Identity
+  provider :identity, :fields => [:name, :email]
   # provider :identity, on_failed_registration: lambda { |env|
   #   IdentitiesController.action(:new).call(env)
   # }

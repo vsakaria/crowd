@@ -1,18 +1,11 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name
 
-  has_many :identities
+  has_many :authentications
 
-  def self.from_omniauth(auth)
-    find_by_provider_and_uid(auth["provider"], auth["uid"]) || create_with_omniauth(auth)
+  def self.find_or_create_from_auth_hash(auth_hash)
+    info = auth_hash['info']
+    name = info['name'] || info['email']
+    find_or_create_by_name(name)
   end
-
-  def self.create_with_omniauth(auth)
-    create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.name = auth["info"]["name"]
-    end
-  end
-
 end
