@@ -9,6 +9,7 @@ gem 'pg'
 gem 'thin'
 
 # External Authentication gems
+gem 'omniauth-identity'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
