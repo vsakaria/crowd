@@ -1,3 +1,8 @@
-hello matey john
 
-<%= @search.result %>
+
+<% @songs.each do |song| %>
+
+  <%= song["title"] %>
+  <br />
+
+<% end %>

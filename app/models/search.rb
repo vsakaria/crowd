@@ -10,12 +10,19 @@ class Search
   end
 
   def do_search
-      @c = Curl::Easy.perform("http://developer.echonest.com/api/v4/song/search?api_key=JMEUQC5ZW6CHVBCXG&artist=#{@artist}")
+      @result = Curl::Easy.perform("http://developer.echonest.com/api/v4/song/search?api_key=JMEUQC5ZW6CHVBCXG&artist=#{@artist}").body_str
+
+      parse_json(@result)
   end
 
-  def result
-     @c.body_str
-  end
+
+private
+
+def parse_json(result)
+  parse_result = JSON.parse(result)
+  parse_result["response"]["songs"]
+end
+
 
 end
 

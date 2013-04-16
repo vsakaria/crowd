@@ -52,6 +52,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   # gem 'capybara-webkit'
+  gem "mocha", :require => false
 end
 
 group :development do
@@ -72,5 +73,7 @@ end
 group :tools do
   gem 'guard-test'
 end
+
+
 
 
