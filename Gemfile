@@ -33,6 +33,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem "curb", "~> 0.8.3"
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -47,10 +48,10 @@ gem 'bootstrap-will_paginate'
 gem 'debugger'
 
 group :development, :test do
-  gem 'capybara'
+  # gem 'capybara'
   gem 'launchy'
   gem 'database_cleaner'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
 end
 
 group :development do
@@ -65,6 +66,7 @@ group :development do
   gem 'rb-fsevent', :require => false
   gem 'rb-fchange', :require => false
   gem 'quiet_assets'
+
 end
 
 group :tools do

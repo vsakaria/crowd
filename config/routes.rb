@@ -1,7 +1,8 @@
 Crowd::Application.routes.draw do
 
-  resources :users
+  resources :searches
 
+  resources :users
 
   get "playlists/index"
 
