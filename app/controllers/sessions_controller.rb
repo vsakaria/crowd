@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    flash[:notice] = "Access was not granted, you are not logged in."
+    flash[:error] = "Access was not granted, you are not logged in."
+    redirect_to root_url
   end
 end
