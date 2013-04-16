@@ -6,4 +6,8 @@ class PlaylistsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "user can create playlist" do
+    get :create
+    assert_response :success
+  end
 end

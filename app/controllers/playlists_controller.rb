@@ -1,5 +1,6 @@
 class PlaylistsController < ApplicationController
   def index
+    @playlist = Playlist.find_by_id(params[:user_id])
   end
 
   def new
