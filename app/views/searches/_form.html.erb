@@ -1,0 +1,13 @@
+<%= form_tag("/searches", :method => "post") do %>
+
+
+  <div class="field">
+    <%= label_tag (:artist) %><br />
+    <%= text_field_tag (:artist) %>
+  </div>
+
+  <div class="actions">
+
+    <%= submit_tag %>
+  </div>
+<% end %>

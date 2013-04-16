@@ -1,5 +1,6 @@
 Crowd::Application.routes.draw do
 
+
   resources :users do
     resource :playlists, :only => ['show', 'edit', 'update']
   end
@@ -13,6 +14,10 @@ Crowd::Application.routes.draw do
   match "/logout", to: "sessions#destroy", :as => "logout"
 
   get '/playlists/new', to: 'playlists#new', :as => 'new_playlist'
+
+  resources :searches
+
+
 
   get "playlists/index"
 
