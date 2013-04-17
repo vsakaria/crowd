@@ -1,0 +1,15 @@
+<div class="playlist-form">
+  <%= form_for(@playlist) do |t| %>
+    <%= t.label :description %>
+    <%= t.text_area :description %>
+
+    <%= t.label :link %>
+    <%= t.text_area :link %>
+
+  <%= t.submit "Create Playlist", class: "btn btn-large btn-primary" %> 
+
+  <% end %>
+
+  <h4><a href="/" class="btn btn-primary">Actually I want to go back to search.</a></h4>
+
+</div>

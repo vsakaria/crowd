@@ -9,6 +9,7 @@ gem 'pg'
 gem 'thin'
 
 # External Authentication gems
+gem 'omniauth-identity'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
@@ -51,8 +52,12 @@ group :development, :test do
   # gem 'capybara'
   gem 'launchy'
   gem 'database_cleaner'
+
+  #gem 'capybara-webkit'
+
   # gem 'capybara-webkit'
   gem "mocha", :require => false
+
 end
 
 group :development do

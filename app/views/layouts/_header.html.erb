@@ -1,0 +1,31 @@
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <% if current_user %>
+          <%= hidden_field_tag "user-id", current_user.id %>
+        <% end %>
+        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <%= link_to "Crowd DJ", root_path, class: "brand" %>
+        <div class="container nav-collapse">
+          <ul class="nav">
+            <li><%= link_to raw('<i class="icon-play"></i> Create Playlist'), new_playlist_path %></li>
+            <li><%= link_to raw('<i class="icon-plus"></i>Add to Playlists'), '#', id: "add_to_playlists" %></li>
+          </ul>
+          <ul class="nav pull-right">
+            <% if current_user %>
+              <li><%= link_to raw("<i class='icon-facebook-sign'></i> #{current_user.name}"), logout_path %></li>
+              <li><%= link_to "Sign out", logout_path %></li>
+            <% else %>
+              <li><%= link_to "Create an account || ", "/auth/identity/register" %></li>
+              <li><%= link_to "Sign in: [with password]", "/auth/identity" %></li>
+              <li><%= link_to raw('<i class="icon-facebook-sign icon-2x"></i>'), "/auth/facebook", id: "fb_sign_in" %></li>
+            <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
