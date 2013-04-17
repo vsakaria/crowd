@@ -8,21 +8,25 @@ class SearchTest < ActiveSupport::TestCase
 
   test "do search returns an array" do
 
-    #How can I run a assert what I expect before the setup isI can'tsetup a search object.
-
     search = Search.new("U2")
 
     assert_instance_of Array, search.do_search
   end
 
-  test "do search returns song title" do
+  test "do search returns array of song hashes" do
 
     search = Search.new("U2")
 
-    assert_not_nil search.do_search.include?('title')
+    result = search.do_search
+
+    songs = [result.first, result.last, result.sample]
+    songs.each do |song|
+    assert song.has_key?('title')
   end
 
-  test "Api is not called if input in empty" do
+  end
+
+  test "Api is not called if input is empty" do
 
     search = Search.new("")
 
