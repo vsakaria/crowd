@@ -1,8 +1,14 @@
 Crowd::Application.routes.draw do
 
 
+  get "songs/new"
+
   resources :users do
-    resource :playlists, :only => ['show', 'edit', 'update']
+    resources :playlists, :only => ['show', 'edit', 'update']
+
+    # get '/playlists/:id', to: 'playlists#user_show'
+    # get '/playlists/:id/edit', to: 'playlists#user_edit'
+    # put '/playlists/:id', to: 'playlists#user_update'
   end
 
   resources :sessions
@@ -13,13 +19,10 @@ Crowd::Application.routes.draw do
   match "/auth/failure", to: "sessions#failure"
   match "/logout", to: "sessions#destroy", :as => "logout"
 
-  get '/playlists/new', to: 'playlists#new', :as => 'new_playlist'
+  # get '/playlists/new', #to: 'playlists#new', :as => 'new_playlist'
+  resources :playlists
 
   resources :searches
-
-
-
-  get "playlists/index"
 
   root :to => 'playlists#index'
 

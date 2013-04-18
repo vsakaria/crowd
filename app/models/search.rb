@@ -23,15 +23,12 @@ class Search
     end
   end
 
+  private
 
-private
-
-def parse_json(result)
-  parse_result = JSON.parse(result)
-  parse_result["response"]["songs"]
-end
-
-
+    def parse_json(result)
+      parse_result = JSON.parse(result)
+      parse_result["response"]["songs"]
+    end
 end
 
 

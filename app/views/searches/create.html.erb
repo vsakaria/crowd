@@ -1,8 +1,7 @@
-
-
 <% @songs.each do |song| %>
 
-  <%= song["title"] %>
+  <%#= song["title"] %> <%#= check_box_tag :in_playlist %>
+  <%= song.inspect %>
   <br />
 <% end %>
 
@@ -11,5 +10,6 @@
   <p id ="track_name"> </p>
 
 </div>
+
 
 
