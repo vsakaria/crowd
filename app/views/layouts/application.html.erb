@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 <head>
   <title>Crowd J</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+
   <%= csrf_meta_tags %>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
@@ -13,7 +16,7 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
-
+<div id="rdio"></div>
   <div class="container">
     <% flash.each do |type, msg| %>
       <div class="alert alert-<%= type == :notice ? "success" : "error" %> fade in">

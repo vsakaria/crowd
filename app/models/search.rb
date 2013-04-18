@@ -15,7 +15,7 @@ class Search
 
   def do_search
     if @artist
-      @result = Curl::Easy.perform("http://developer.echonest.com/api/v4/song/search?api_key=JMEUQC5ZW6CHVBCXG&artist=#{@artist}").body_str
+      @result = Curl::Easy.perform("http://developer.echonest.com/api/v4/song/search?api_key=JMEUQC5ZW6CHVBCXG&format=json&results=20&artist={@artist}&bucket=id:rdio-US&bucket=tracks&limit=true").body_str
 
       parse_json(@result)
     else
@@ -33,4 +33,16 @@ end
 
 
 end
+
+
+
+# def do_search
+#     if @artist
+#       @result = Curl::Easy.perform("http://developer.echonest.com/api/v4/song/search?api_key=JMEUQC5ZW6CHVBCXG&artist=#{@artist}").body_str
+
+#       parse_json(@result)
+#     else
+#       nil
+#     end
+#   end
 
