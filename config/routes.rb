@@ -22,4 +22,6 @@ Crowd::Application.routes.draw do
   get "playlists/index"
 
   root :to => 'playlists#index'
+
+  get '/hello', to: 'application#hello'
 end
