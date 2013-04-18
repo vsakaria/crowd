@@ -1,11 +1,10 @@
 class SearchesController < ApplicationController
 
-  def create
+  def search
     @search = Search.new(params[:artist])
     @songs = @search.do_search
+    respond_to do |format|
+      format.js
+    end
   end
-
-  def index
-  end
-
 end
