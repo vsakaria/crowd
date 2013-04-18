@@ -1,5 +1,5 @@
 <div class="playlist-form">
-  <%= form_for(@playlist) do |t| %>
+  <%= form_for([current_user, @playlist]) do |t| %>
     <%= t.label :title %>
     <%= t.text_field :title %>
 
