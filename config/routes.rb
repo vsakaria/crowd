@@ -2,7 +2,7 @@ Crowd::Application.routes.draw do
 
 
   resources :users do
-    resource :playlists, :only => ['show', 'edit', 'update']
+    resources :playlists, :only => ['show', 'edit', 'update','create']
   end
 
   resources :sessions

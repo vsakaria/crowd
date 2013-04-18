@@ -1,12 +1,14 @@
 <div class="playlist-form">
-  <%= form_for(@playlist) do |t| %>
-    <%= t.label :description %>
-    <%= t.text_area :description %>
+  <%= form_for([current_user, @playlist]) do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+    <!--%= t.label :description %-->
+    <!--%= t.text_area :description %-->
 
-    <%= t.label :link %>
-    <%= t.text_area :link %>
+    <!--%= t.label :link %-->
+    <!--%= t.text_area :link %-->
 
-  <%= t.submit "Create Playlist", class: "btn btn-large btn-primary" %> 
+  <%= t.submit "Create Playlist", class: "btn btn-large btn-primary" %>
 
   <% end %>
 
