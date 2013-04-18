@@ -22,7 +22,7 @@ Crowd::Application.routes.draw do
   # get '/playlists/new', #to: 'playlists#new', :as => 'new_playlist'
   resources :playlists
 
-  resources :searches
+  get "/search", to: "searches#search"
 
   root :to => 'playlists#index'
 end
