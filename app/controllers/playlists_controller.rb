@@ -14,7 +14,7 @@ class PlaylistsController < ApplicationController
 
    
     if @playlist.save
-      redirect_to [current_user, @playlist]
+      redirect_to @playlist
       # redirect_to @playlist
     else
       render :new
