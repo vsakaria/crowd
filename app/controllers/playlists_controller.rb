@@ -1,19 +1,18 @@
 class PlaylistsController < ApplicationController
   def index
-    @playlist = Playlist.find_by_id(params[:user_id])
+    @playlist = Playlist.all
   end
 
   def new
     @playlist = Playlist.new
     # search = Search.new
-    # search.create 
+    # search.create
   end
 
   def create
-   
+    
     if @playlist.save
       redirect_to @playlist
-      # redirect_to @playlist
     else
       render :new
     end
