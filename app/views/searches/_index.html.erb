@@ -1,7 +1,11 @@
 <ul>
   <% @songs.each do |song| %>
-    <li class="song" id="song[#{song.id}]">
-      <%= song["title"] %> <%= check_box_tag :in_playlist %>
-    </li>
+    <%= form_tag(song, remote: true) do |f| %>
+      <%= check_box_tag :add_to_playlist %>
+      <%= submit_tag "Add to Playlist", id: song["title"] %>
+      <%= label_tag :add_to_playlist, song["title"] %>
+      <%= link_to "(remove)", song, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+
+    <% end %>
   <% end %>
 </ul>
