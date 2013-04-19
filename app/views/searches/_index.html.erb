@@ -1,0 +1,7 @@
+<ul>
+  <% @songs.each do |song| %>
+    <li class="song" id="song[#{song.id}]">
+      <%= song["title"] %> <%= check_box_tag :in_playlist %>
+    </li>
+  <% end %>
+</ul>
