@@ -1,3 +1,11 @@
 // Place all the styles related to the playlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#search-results {
+  border: 1px solid blue;
+}
+
+#new-playlist-from-search {
+  border: 1px solid red;
+}
