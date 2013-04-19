@@ -11,8 +11,6 @@ class PlaylistsController < ApplicationController
 
   def create
    
-
-   
     if @playlist.save
       redirect_to @playlist
       # redirect_to @playlist
