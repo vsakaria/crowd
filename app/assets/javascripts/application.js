@@ -23,7 +23,7 @@ $(function() {
 
 
     $('#rdio').bind('ready.rdio', function() {
-        $(this).rdio().play('t2732487');
+        //$(this).rdio().play('t2732487');
         console.log("this shouldbeplaying");
 
         //MUST RECIEVCE A JSON ELEMENT "rdio-US:release:a1976692"
