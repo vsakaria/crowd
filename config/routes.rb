@@ -25,4 +25,6 @@ Crowd::Application.routes.draw do
   resources :searches
 
   root :to => 'playlists#index'
+
+  get '/hello', to: 'application#hello'
 end

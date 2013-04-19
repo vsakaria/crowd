@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?
 
+  def hello
+    end
+
   private
 
     def current_user
@@ -17,5 +20,7 @@ class ApplicationController < ActionController::Base
     def logged_in?
       !!current_user
     end
+
+
 
 end
