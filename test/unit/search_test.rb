@@ -13,16 +13,30 @@ class SearchTest < ActiveSupport::TestCase
     assert_instance_of Array, search.do_search
   end
 
-  test "do search returns array of song hashes" do
+  # test "do search returns array of song hashes" do
+
+  #   search = Search.new("U2")
+
+  #   result = search.do_search
+
+  #   songs = [result.first, result.last, result.sample]
+  #   songs.each do |song|
+  #   assert song.has_key?('title')
+  # end
+
+
+  test "do search returns array of specfic song hashes" do
 
     search = Search.new("U2")
 
     result = search.do_search
 
-    songs = [result.first, result.last, result.sample]
-    songs.each do |song|
-    assert song.has_key?('title')
-  end
+    assert result.first.has_key?("artist_name")
+    assert result.first.has_key?("artist_id")
+    assert result.first.has_key?("title")
+    assert result.first.has_key?("rdio_id")
+    assert result.first.has_key?("track_id")
+    assert_nil result.first.has_key?("audio_md5")
 
   end
 
