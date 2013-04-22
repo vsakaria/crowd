@@ -29,4 +29,12 @@ $(function() {
         //MUST RECIEVCE A JSON ELEMENT "rdio-US:release:a1976692"
     });
 
+ 
+             $(song) {
+                var song = song.attributes.icon;
+                $("#playlist-images").attr('src', image);
+              
+           
+        });
+
 });
