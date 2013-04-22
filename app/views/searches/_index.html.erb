@@ -10,8 +10,14 @@
 
 
     <li class="song" id="song[#{song.id}]">
+      </br>
+      <input type="submit" value="Play" id ="play_button">
+
+      <input type="submit" value="Stop" id ="stop_button">
+      </br>
       <%= song["artist_name"] %>
       <%= song["title"] %> <%#= check_box_tag :in_playlist %>
+
     </li>
   <% end %>
 </ul>
