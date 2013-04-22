@@ -1,5 +1,5 @@
 jQuery.ajaxSettings.traditional = true; 
-
+// var artist = @random_artist
 function fetchImages(artist) {
     var url = 'http://developer.echonest.com/api/v4/artist/images';
 
@@ -83,6 +83,6 @@ function error(s) {
 }
     
 $(document).ready(function() {
-    $("#go").click(go);
+    go();
     $("#artist").change(go);
 });

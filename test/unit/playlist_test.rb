@@ -17,4 +17,8 @@ class PlaylistTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+
+  test "gets a song from users playlist" do
+    
+  end
 end
