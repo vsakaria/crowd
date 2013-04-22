@@ -1,0 +1,8 @@
+<%= form_tag('@song', class: "remove-from-playlist-form") do |f| %>
+  <%= check_box_tag :remove_from_playlist, :class => "add-song-checkbox" %>
+  <%= submit_tag "Remove from Playlist", id: @song.title, :class => "remove-song-submit-btn" %>
+  <%= label_tag :remove_from_playlist, @song.title %>
+  <%= hidden_field_tag :artist_name, @song.artist_name %>
+  <%#= link_to "(remove)", song, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+
+<% end %>
