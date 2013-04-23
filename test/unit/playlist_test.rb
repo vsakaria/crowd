@@ -18,7 +18,9 @@ class PlaylistTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  test "gets a song from users playlist" do
-    
+  test "gets artist name from users playlist" do
+    artist = Playlist.new :artist_name => "U2"
+    Playlist.artist_from_playlist
+    assert_equal "U2"
   end
 end

@@ -18,7 +18,7 @@ class Playlist < ActiveRecord::Base
   has_many :songs
 
   def artist_from_playlist
-    playlists.songs.first.artist_name.first
+    songs.first.artist_name.first
   end
 end
 
