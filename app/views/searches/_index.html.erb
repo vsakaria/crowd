@@ -2,7 +2,7 @@
   <% @songs.each do |song, index| %>
     <li>
       <%= form_tag('/playlists', class: "add-to-playlist-form", id: "add_to_playlist_#{index}") do |f| %>
-        <%= submit_tag "Add to Playlist", id: song["title"], :class => "add-song-submit-btn" %>
+        <%= submit_tag "Add to Playlist", id: song["title"], :class => "add-song-submit-btn btn" %>
         <%= label_tag :add_to_playlist, song["title"] %>
         <%= hidden_field_tag(( :artist_name.to_s + "_#{index}"), song["artist_name"], :class => "artist_name") %>
         <%= hidden_field_tag(( :artist_id.to_s + "_#{index}"), song["artist_id"], :class => "artist_id") %>
