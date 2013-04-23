@@ -1,11 +1,14 @@
 <strong><%= @playlist.title %></strong>
+<%= hidden_field_tag :playlist_id, @playlist.id %>
 
 <%= render '/searches/form' %>
 
+<div>
+  <div class="span6 pull-left" id="search-results">
+    <h2>Playlist Song Candidates</h2>
+  </div>
 
-<div id="search-results">
-  <h2>Playlist Song Candidates</h2>
+  <div class="span6 pull-right" id="songs-in-playlist" %>
+    <%= render '/playlists/index' %>
+  </div>
 </div>
-
-
-<%= render '/playlists/index' %>
