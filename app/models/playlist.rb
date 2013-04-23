@@ -17,6 +17,8 @@ class Playlist < ActiveRecord::Base
   belongs_to :user
   has_many :songs
 
-
+  def artist_from_playlist
+    songs.first.artist_name.first
+  end
 end
 

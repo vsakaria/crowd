@@ -1,6 +1,6 @@
 class PlaylistsController < ApplicationController
   def index
-    @playlist = Playlist.all
+    @playlists = Playlist.all
   end
 
   def new
@@ -35,4 +35,10 @@ class PlaylistsController < ApplicationController
     @playlist = Playlist.find(params[:id])
     @playlist.destroy
   end
+
+  def random_artist_from_playlist
+     @playlist = Playlist.find(params[:id])
+     @random_artist = @playlist.artist_from_playlist
+  end
+
 end
