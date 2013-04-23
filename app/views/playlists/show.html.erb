@@ -1,4 +1,5 @@
 <strong><%= @playlist.title %></strong>
+<%= hidden_field_tag :playlist_id, @playlist.id %>
 
 <%= render '/searches/form' %>
 
