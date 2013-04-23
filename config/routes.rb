@@ -1,7 +1,7 @@
 Crowd::Application.routes.draw do
 
 
-  get "songs/new"
+  # get "songs/new"
 
   resources :users do
     resources :playlists, :only => ['show', 'edit', 'update']
@@ -13,6 +13,7 @@ Crowd::Application.routes.draw do
 
   resources :sessions
   resources :identities
+  resources :songs
 
 
   match "/auth/:provider/callback", to: "sessions#create"

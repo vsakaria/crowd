@@ -1,16 +1,14 @@
 <ul>
-  <% @songs.each do |song| %>
-
-    <%= form_tag song, remote: true do |f| %>
-     <%= check_box_tag :add_to_playlist %>
-     <%= submit_tag "Add to Playlist" %>
-     <%= label_tag song["title"] %>
-     <%= link_to "(remove)", song, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
-    <% end %>
-
-
-    <li class="song" id="song[#{song.id}]">
-      <%= song["title"] %> <%#= check_box_tag :in_playlist %>
+  <% @songs.each do |song, index| %>
+    <li>
+      <%= form_tag('/playlists', class: "add-to-playlist-form", id: "add_to_playlist_#{index}") do |f| %>
+        <%= submit_tag "Add to Playlist", id: song["title"], :class => "add-song-submit-btn" %>
+        <%= label_tag :add_to_playlist, song["title"] %>
+        <%= hidden_field_tag(( :artist_name.to_s + "_#{index}"), song["artist_name"], :class => "artist_name") %>
+        <%= hidden_field_tag(( :artist_id.to_s + "_#{index}"), song["artist_id"], :class => "artist_id") %>
+        <%= hidden_field_tag(( :song_id.to_s + "_#{index}"), song["song_id"], :class => "song_id") %>
+        <%= link_to "(remove)", song, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
+      <% end %>
     </li>
   <% end %>
 </ul>
