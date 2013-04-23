@@ -22,6 +22,8 @@ $(function() {
       $(this).rdio().play('t2732487');
       console.log("this shouldbeplaying");
     });
+
+
     $(song) {
       var song = song.attributes.icon;
       $("#playlist-images").attr('src', image);

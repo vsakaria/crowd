@@ -30,7 +30,10 @@ THE SOFTWARE.
 // if you want to do playback as a particular user, pass --authenticate to rdio-call
 // then update playback_token below with YOUR_PLAYBACK_TOKEN and the domain below with YOUR_DOMAIN
 
-var playback_token = "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=";
-// var playback_token = 'GABRdHQn_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbu_CtoS2KmucVlTt8hujXpg=';
-// var playback_token = "GABRb881AFOJkWFiMmZ3dmF0cGU0eWsza2E2dzZ6MmJhcD7iwrSq4AI8uOwWYwq6xfI=";
+// var playback_token = "GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=";
+// // var playback_token = 'GABRdHQn_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbu_CtoS2KmucVlTt8hujXpg=';
+// // var playback_token = "GABRb881AFOJkWFiMmZ3dmF0cGU0eWsza2E2dzZ6MmJhcD7iwrSq4AI8uOwWYwq6xfI=";
+// var domain = "localhost";
+
+var playback_token = "GABRb881AFOJkWFiMmZ3dmF0cGU0eWsza2E2dzZ6MmJhcD7iwrSq4AI8uOwWYwq6xfI=";
 var domain = "localhost";
