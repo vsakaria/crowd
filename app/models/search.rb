@@ -2,7 +2,7 @@ require "curb"
 
 class Search
 
-  attr_accessor :artist, :track, :result, :url
+  attr_accessor :artist, :result, :url, :songs
 
   def initialize artist
     if !artist.empty?
@@ -17,23 +17,26 @@ class Search
 
       @result = Curl::Easy.perform("http://developer.echonest.com/api/v4/song/search?api_key=JMEUQC5ZW6CHVBCXG&format=json&results=20&artist=#{@artist}&bucket=id:rdio-US&bucket=tracks&limit=true").body_str
 
-        gitparse_json(@result)
+        parse_json(@result)
     else
       nil
     end
   end
 
-  private
+
 
     def parse_json(result)
       parse_result = JSON.parse(result)
-      songs = parse_result["response"]["songs"]
+      @songs = parse_result["response"]["songs"]
 
-      songs.each do |song|
-        song.delete("audio_md5")
-        song.delete("catalog")
-        song.delete("id")
-        song["tracks"][0]["foreign_id"]).split(":")[2]
+      @songs.map do |song|
+        {
+          :title => song["title"],
+          :artist_id => song["artist_id"],
+          :artist_name => song["artist_name"],
+          :id => song["id"],
+          :tracks_rdio_ids => song["tracks"].first["foreign_id"].split(":")[2]
+        }
       end
 
     end
