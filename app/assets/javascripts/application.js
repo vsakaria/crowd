@@ -24,7 +24,6 @@ $(function() {
     });
     $(song) {
       var song = song.attributes.icon;
-      $("#playlist-images").attr('src', image);                      
+      $("#playlist-images").attr('src', image);
     });
 });
-

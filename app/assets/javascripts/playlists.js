@@ -3,6 +3,12 @@
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready(function() {
+  // // Initialize Rdio player
+  // $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
+  // $('#rdio').bind('ready.rdio', function() {
+  //   console.log("Rdio init");
+  // });
+
   $(document).on('submit', '.add-to-playlist-form', function(e) {
     e.preventDefault();
     var selected_song = $(this);
@@ -12,8 +18,8 @@ $(document).ready(function() {
     var song_id = $(this).find('.song_id').val();
     var current_playlist_id = $('#playlist_id').val();
     var addToPlaylist = function(song_title) {
-      $.post( '/songs', 
-              { song: { title: song_title, 
+      $.post( '/songs',
+              { song: { title: song_title,
                         artist_name: song_artist_name,
                         artist_id: song_artist_id,
                         song_id: song_id,
@@ -27,3 +33,5 @@ $(document).ready(function() {
     addToPlaylist(song_title)
   });
 });
+
+ //           $.rdio().play('t2732487')
