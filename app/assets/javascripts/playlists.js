@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
 
-  $(document).on('submit', '.add-to-playlist-form', function(e) {
+  $(document).on('submit.add-song-submit-btn', '.add-to-playlist-form', function(e) {
     e.preventDefault();
     var selected_song = $(this);
     var song_title = $(this).find('label').text();
@@ -27,7 +27,8 @@ $(document).ready(function() {
                         playlist_id: current_playlist_id
                       }
               }
-            );
+            )
+      .success(selected_song.parent().remove());
     }
     saveSongsForPlaylist( song_title, 
                           song_artist_name, 
@@ -37,5 +38,3 @@ $(document).ready(function() {
                         );
   });
 });
-
- //           $.rdio().play('t2732487')

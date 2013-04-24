@@ -10,8 +10,11 @@
         <%= submit_tag "Add to Playlist", id: "submit-to-playlist-#{index}", :class => "add-song-submit-btn btn" %>
         <%= link_to "(remove)", song, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
         <!-- Rdio play buttons -->
-        <input type="submit" value="Play" id ="play_button">
-        <input type="submit" value="Stop" id ="stop_button">
+        <!-- <input type="submit" value="Play" id ="play_button"> -->
+        <!-- <input type="submit" value="Stop" id ="stop_button"> -->
+        <%= button_tag "Play", type: 'button', id: "#{song[:tracks_rdio_id]}", class: "play-rdio-track btn" %>
+        <%= button_tag "Stop", type: 'button', id: "#{song[:tracks_rdio_id]}", class: "stop-rdio-track btn" %>
+
       <% end %>
     </li>
   <% end %>
