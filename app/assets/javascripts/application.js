@@ -24,8 +24,8 @@ $(function() {
     });
 
 
-    $(song) {
-      var song = song.attributes.icon;
-      $("#playlist-images").attr('src', image);
-    });
+    // $(song) {
+    //   var song = song.attributes.icon;
+    //   $("#playlist-images").attr('src', image);
+    // });
 });
