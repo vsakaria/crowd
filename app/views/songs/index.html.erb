@@ -1,0 +1,9 @@
+<h1>All of your Songs</h1>
+<h2>Current user only</h2>
+<%= @songs.each do |song| %>
+
+<ul>
+  <li><%= song.title %></li>
+</ul>
+
+<% end %>
