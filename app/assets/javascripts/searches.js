@@ -6,7 +6,9 @@ $(function() {
 
     $('#play_button').click( function() {
         console.log("Click play on MAx own our search event handle");
-        $('#rdio').rdio().play('t3561638')
+        var rdio_id = $('.rdio_id').val()
+        console.log(rdio_id)
+        $('#rdio').rdio().play(rdio_id)
     });
 
     $('#stop_button').click( function() {
