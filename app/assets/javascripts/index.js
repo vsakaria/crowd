@@ -1,5 +1,4 @@
-jQuery.ajaxSettings.traditional = true; 
-// var artist = @random_artist
+ // var artist = @random_artist
 function fetchImages(artist) {
     var url = 'http://developer.echonest.com/api/v4/artist/images';
 
