@@ -3,7 +3,7 @@
 
 
 
-  <h1 id="main_title">Ok let's starting searching for tunes!</h1>
+  <h1 class="main_title">Ok let's starting searching for tunes!</h1>
   <div>
     <%= render '/searches/form' %>
   </div>
@@ -13,7 +13,7 @@
   This call the form which has a UJS Ajax call which renders the whole response and appends it into the div. See searches contoller search and the search.js.erb for more info.
    -->
   <div class="span6 pull-left" id="search-results">
-    <h2>Playlist Song Candidates</h2>
+    <h2 class="sub_title">Search results</h2>
   </div>
 
   <div class="span6 pull-right" id="songs-in-playlist" %>

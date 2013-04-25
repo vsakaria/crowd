@@ -1,19 +1,35 @@
 <ul>
   <% @songs.each_with_index do |song, index| %>
+
+
     <li class="song" id="song[#{song.id}]">
+
       <%= form_tag('/playlists', class: "add-to-playlist-form", id: "add_to_playlist_#{index}") do |f| %>
+
+
         <%= hidden_field_tag(( :tracks_rdio_id.to_s + "_#{index}"), song[:tracks_rdio_id], :class => "rdio_id") %>
-        <%= label_tag :add_to_playlist, song[:title] %>
+
+
         <%= hidden_field_tag(( :artist_name.to_s + "_#{index}"), song[:artist_name], :class => "artist_name") %>
+
+
         <%= hidden_field_tag(( :artist_id.to_s + "_#{index}"), song[:artist_id], :class => "artist_id") %>
+
+
         <%= hidden_field_tag(( :song_id.to_s + "_#{index}"), song[:song_id], :class => "song_id") %>
+
+
+         <%= label_tag :add_to_playlist, song[:artist_name], :class => "artist_name" %>
+
+        <%= label_tag :add_to_playlist, song[:title], :class => "song_title" %>
+
         <%= submit_tag "Add to Playlist", id: "submit-to-playlist-#{index}", :class => "add-song-submit-btn btn" %>
-        <%= link_to "(remove)", song, method: :delete, data: { confirm: "Are you sure?" }, remote: true %>
-        <!-- Rdio play buttons -->
-        <!-- <input type="submit" value="Play" id ="play_button"> -->
-        <!-- <input type="submit" value="Stop" id ="stop_button"> -->
+
         <%= button_tag "Play", type: 'button', id: "#{song[:tracks_rdio_id]}", class: "play-rdio-track btn" %>
+
         <%= button_tag "Stop", type: 'button', id: "#{song[:tracks_rdio_id]}", class: "stop-rdio-track btn" %>
+
+
 
       <% end %>
     </li>
