@@ -18,12 +18,10 @@
 
 $(function() {
   $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
-  $('#rdio').on('ready.rdio', function() {
-      console.log("ready to play");
-    });
 
-    // $(song) {
-    //   var song = song.attributes.icon;
-    //   $("#playlist-images").attr('src', image);
-    // });
+  $('#rdio').on('ready.rdio', function() {
+    console.log("ready to play");
+  });
 });
+
+

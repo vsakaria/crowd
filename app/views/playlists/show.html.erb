@@ -1,7 +1,12 @@
-<strong><%= @playlist.title %></strong>
+
 <%= hidden_field_tag :playlist_id, @playlist.id %>
 
-<%= render '/searches/form' %>
+
+
+  <h1 id="main_title">Ok let's starting searching for tunes!</h1>
+  <div>
+    <%= render '/searches/form' %>
+  </div>
 
 <div>
   <!--

@@ -1,31 +1,108 @@
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <% if current_user %>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+
+        <style>
+      body{
+        background:#333 url(bg.jpg) repeat top left;
+        font-family:Arial;
+      }
+      span.reference{
+        position:fixed;
+        left:10px;
+        bottom:10px;
+        font-size:12px;
+      }
+      span.reference a{
+        color:#aaa;
+        text-transform:uppercase;
+        text-decoration:none;
+        text-shadow:1px 1px 1px #000;
+        margin-right:30px;
+      }
+      span.reference a:hover{
+        color:#ddd;
+      }
+      ul.sdt_menu{
+        margin-top:150px;
+      }
+      h1.title{
+        text-indent:-9000px;
+        background:transparent url(title.png) no-repeat top left;
+        width:633px;
+        height:69px;
+      }
+    </style>
+    </head>
+
+    <body>
+
+       <% if current_user %>
           <%= hidden_field_tag "user-id", current_user.id %>
         <% end %>
-        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <%= link_to "Crowd DJ", root_path, class: "brand" %>
-        <div class="container nav-collapse">
-          <ul class="nav">
-            <li><%= link_to raw('<i class="icon-play"></i> Create Playlist'), new_playlist_path %></li>
-            <li><%= link_to raw('<i class="icon-plus"></i>Add to Playlists'), '#', id: "add_to_playlists" %></li>
-          </ul>
-          <ul class="nav pull-right">
-            <% if current_user %>
-              <li><%= link_to raw("<i class='icon-facebook-sign'></i> #{current_user.name}"), logout_path %></li>
-              <li><%= link_to "Sign out", logout_path %></li>
-            <% else %>
-              <li><%= link_to "Create an account || ", "/auth/identity/register" %></li>
-              <li><%= link_to "Sign in: [with password]", "/auth/identity" %></li>
-              <li><%= link_to raw('<i class="icon-facebook-sign icon-2x"></i>'), "/auth/facebook", id: "fb_sign_in" %></li>
-            <% end %>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+
+
+    <div class="content offset7">
+
+      <ul id="sdt_menu" class="sdt_menu">
+
+        <li>
+          <a href="<%= root_path %>">
+            <img src="/assets/2.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+             <span class="sdt_link">Crowd Dj</span>
+              <span class="sdt_descr">The people's Playlist</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+
+          <a href="<%= new_playlist_path %> ">
+            <img src="/assets/1.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Get Started</span>
+
+              <span class="sdt_descr">create a playlist</span>
+            </span>
+          </a>
+        </li>
+
+        <% if current_user %>
+
+           <li>
+          <a href="<%=logout_path%>">
+            <img src="/assets/3.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link"><%= current_user.first_name %></span>
+              <span class="sdt_descr"> <%= %> Sign Out Come back soon</span>
+
+            </span>
+          </a>
+        </li>
+
+        <% else %>
+        <li>
+          <a href="/auth/facebook">
+            <img src="/assets/3.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Sign In</span>
+              <span class="sdt_descr"> <%= %> Let's start playing</span>
+
+            </span>
+          </a>
+        </li>
+        <%end%>
+
+      </ul>
     </div>
-  </div>
+
+    <div class="offset7" id="main_image_cont">
+      <img id="main_image"src="/assets/party.jpg">
+    </div>
+
+
+
