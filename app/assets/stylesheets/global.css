@@ -105,3 +105,16 @@ ul.sdt_menu li div.sdt_box a:first-child{
 ul.sdt_menu li div.sdt_box a:hover{
   color:#fff;
 }
+
+div.content{
+  margin-bottom: 400px;
+
+}
+
+img#main_image{
+  height: 200px;
+}
+
+div#main_image_cont{
+
+}

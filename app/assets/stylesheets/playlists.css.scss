@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  background-image:url('crowdshot.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}
+// body{
+//   background-image:url('crowdshot.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 100%;
+// }
 
 h1#main_title{
   text-align:center;
@@ -30,4 +30,14 @@ h2#sub_title{
 
 #new-playlist-from-search {
   border: 1px solid red;
+}
+
+
+.create-field{
+  width: 400px; height: 30px;
+}
+
+.create_playlist_btn{
+  height: 35px;
+  margin-bottom: 6px;
 }

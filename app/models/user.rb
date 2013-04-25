@@ -9,7 +9,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :first_name
 
   has_many :authentications
   has_many :playlists
@@ -18,5 +18,9 @@ class User < ActiveRecord::Base
     info = auth_hash['info']
     name = info['name'] || info['email']
     find_or_create_by_name(name)
+  end
+
+  def first_name
+    name.split(" ").first
   end
 end

@@ -18,14 +18,11 @@
 
 $(function() {
   $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
+
   $('#rdio').bind('ready.rdio', function() {
-      $(this).rdio().play('t2732487');
-      console.log("this shouldbeplaying");
-    });
+  console.log("Rdio Callback")
 
-
-    $(song) {
-      var song = song.attributes.icon;
-      $("#playlist-images").attr('src', image);
     });
 });
+
+

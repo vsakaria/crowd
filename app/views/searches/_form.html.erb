@@ -1,11 +1,15 @@
-<%= form_tag("/search", :id => 'search-box', :method => "get", remote: true) do %>
 
-  <div class="field">
+
+
+<%= form_tag("/search",:class => 'offset0', :id => 'search-box', :method => "get", remote: true) do %>
+
+  <div class="field" id="search_field">
     <%= label_tag (:artist) %><br />
     <%= text_field_tag (:artist) %>
+    <%= submit_tag "Search", class: "btn btn-primary", :id => "search_btn"%>
   </div>
 
-  <div class="actions">
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div class="actions" id="search_btn">
+
   </div>
 <% end %>

@@ -36,48 +36,73 @@
 
     <body>
 
-    <div class="content">
+       <% if current_user %>
+          <%= hidden_field_tag "user-id", current_user.id %>
+        <% end %>
+
+
+    <div class="content offset7">
 
       <ul id="sdt_menu" class="sdt_menu">
 
         <li>
-          <a href="#">
-            <img src="images/2.jpg" alt=""/>
+          <a href="<%= root_path %>">
+            <img src="/assets/2.jpg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
-              <span class="sdt_link">Crowd Dj</span>
+             <span class="sdt_link">Crowd Dj</span>
               <span class="sdt_descr">The people's Playlist</span>
             </span>
           </a>
         </li>
 
         <li>
-          <a href="#">
-            <img src="images/1.jpg" alt=""/>
+
+          <a href="<%= new_playlist_path %> ">
+            <img src="/assets/1.jpg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
-              <span class="sdt_link">Playlist</span>
+              <span class="sdt_link">Get Started</span>
+
               <span class="sdt_descr">create a playlist</span>
             </span>
           </a>
         </li>
 
+        <% if current_user %>
+
+           <li>
+          <a href="<%=logout_path%>">
+            <img src="/assets/3.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link"><%= current_user.first_name %></span>
+              <span class="sdt_descr"> <%= %> Sign Out Come back soon</span>
+
+            </span>
+          </a>
+        </li>
+
+        <% else %>
         <li>
-          <a href="#">
-            <img src="images/3.jpg" alt=""/>
+          <a href="/auth/facebook">
+            <img src="/assets/3.jpg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Sign In</span>
-              <span class="sdt_descr">Let's starting playing</span>
+              <span class="sdt_descr"> <%= %> Let's start playing</span>
+
             </span>
           </a>
-          <div class="sdt_box">
-            <a href="#">Sign In with Facebook</a>
-            <img src="http://placehold.it/25x25">
-          </div>
         </li>
+        <%end%>
+
       </ul>
     </div>
 
+    <div class="offset7" id="main_image_cont">
+      <img id="main_image"src="/assets/party.jpg">
+    </div>
 
-        <!-- The JavaScript -->
+
+
