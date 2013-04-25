@@ -2,6 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+  background-image:url('crowdshot.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+h1#main_title{
+  text-align:center;
+  color: white;
+  font-family: 'Righteous', cursive;
+  font-size: 48px;
+}
+
+h2#sub_title{
+  text-align:center;
+  color: #0083C9;
+  font-family: 'Righteous', cursive;
+  font-size: 28px;
+}
+
+
 #search-results {
   border: 1px solid blue;
 }
