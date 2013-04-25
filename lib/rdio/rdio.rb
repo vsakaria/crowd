@@ -8,8 +8,8 @@ SITE = 'http://api.rdio.com'
 PATH = '/1/'
 
 class Rdio
-  def initialize(key, secret)
-    @consumer = OAuth::Consumer.new key, secret, {:site => SITE}
+  def initialize
+    @consumer = OAuth::Consumer.new Rdio.key, Rdio.secret, {:site => SITE}
     @consumer.http.read_timeout = 600 # ten-minute timeout, thanks
     @access_token = OAuth::AccessToken.new @consumer
   end
@@ -21,4 +21,18 @@ class Rdio
     response = @access_token.post PATH, args
     return response.body
   end
+
+  def self.api_keys(key, secret)
+    @key = key
+    @secret = secret
+  end
+
+  def self.key
+    @key
+  end
+
+  def self.secret
+    @secret
+  end
+
 end
