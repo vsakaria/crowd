@@ -13,7 +13,7 @@ Crowd::Application.routes.draw do
 
   resources :sessions
   resources :identities
-  resources :songs
+  # resources :songs
 
 
   match "/auth/:provider/callback", to: "sessions#create"
@@ -21,7 +21,9 @@ Crowd::Application.routes.draw do
   match "/logout", to: "sessions#destroy", :as => "logout"
 
   # get '/playlists/new', #to: 'playlists#new', :as => 'new_playlist'
-  resources :playlists
+  resources :playlists do 
+    post "/songs/:song_id", to: "playlists#"
+  end
 
   get "/search", to: "searches#search"
 

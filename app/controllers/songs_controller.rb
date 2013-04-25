@@ -8,7 +8,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    logger.debug
+  
     @song = Song.new(params[:song])
     if @song.save
       respond_to do |format|
@@ -22,11 +22,8 @@ class SongsController < ApplicationController
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
-
     respond_to do |format|
-      format.html { redirect_to playlists_url}
-      format.js { render songs_url }
-      format.json { head :no_content, status: 200 }
+      format.js    
     end
   end
 end

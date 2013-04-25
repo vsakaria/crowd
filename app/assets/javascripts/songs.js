@@ -7,15 +7,15 @@ $(document).ready(function() {
     e.preventDefault();
     var selected_song = $(this);
     var song_title = $(this).find('label').text();
-    // var removeFromPlaylist = function(song_title) {
-    //   $.get( '/songs', 
-    //           { song: {title: song_title} }
-    //         )
-    //   .success(function(data) {
-    //     $(selected_song).hide();
-    //   });
-    // }
-    // alert('you wanna remove me ' + song_title);
-    // removeFromPlaylist(song_title)
+    var removeFromPlaylist = function(song_title) {
+      $.get( '/songs', 
+              { song: {title: song_title} }
+            )
+      .success(function(data) {
+        $(selected_song).hide();
+      });
+    }
+    alert('you wanna remove me ' + song_title);
+    removeFromPlaylist(song_title)
   });
 });
