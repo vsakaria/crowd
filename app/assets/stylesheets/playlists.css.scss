@@ -23,7 +23,6 @@ h2#sub_title{
   font-size: 28px;
 }
 
-
 #search-results {
   border: 1px solid blue;
 }
@@ -32,7 +31,6 @@ h2#sub_title{
   border: 1px solid red;
 }
 
-
 .create-field{
   width: 400px; height: 30px;
 }
@@ -40,4 +38,9 @@ h2#sub_title{
 .create_playlist_btn{
   height: 35px;
   margin-bottom: 6px;
+}
+
+li.song {
+  list-style-type: none;
+
 }

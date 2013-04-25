@@ -19,10 +19,9 @@
 $(function() {
   $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
 
-  $('#rdio').bind('ready.rdio', function() {
-  console.log("Rdio Callback")
-
-    });
+  $('#rdio').on('ready.rdio', function() {
+    console.log("ready to play");
+  });
 });
 
 
