@@ -11,7 +11,7 @@ class Search
     else
       @artist = nil
     end
-    @rdio = Rdio.new(CONSUMER_KEY, CONSUMER_SECRET)
+    @rdio = Rdio.new #(CONSUMER_KEY, CONSUMER_SECRET)
   end
 
   def do_search

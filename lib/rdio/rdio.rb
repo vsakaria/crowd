@@ -23,6 +23,7 @@ class Rdio
   end
 
   def self.api_keys(key, secret)
+    debugger
     @key = key
     @secret = secret
   end
