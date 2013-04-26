@@ -24,7 +24,7 @@ $(function() {
   // var playback_token = production ? 
   // $('#rdio').rdio(playback_token);
 
-  $('#rdio').rdio("GBZReaPd_____3pkdXMyeXQ5eHVteWdqeHd4bW1kZndra2Nyb3dkLWRqLmhlcm9rdWFwcC5jb20ng_nNie-3N3N583R9pVeh\=");
+  $('#rdio').rdio("GBZRel85_____3pkdXMyeXQ5eHVteWdqeHd4bW1kZndra2Nyb3dkLWRqLmhlcm9rdWFwcC5jb22uEWI27Fx-vWZLw-Y0k9wq");
   // $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
 
 
