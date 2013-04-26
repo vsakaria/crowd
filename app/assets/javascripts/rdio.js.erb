@@ -1,0 +1,14 @@
+$(function() {
+
+// var playback_token = @rdio.getPlaybackToken(domain: "#{Rdio.rdio_domain}");
+// console.log("getPlaybackToken: [" + playback_token + ']');
+
+  // var playback_token = production ? 
+  // $('#rdio').rdio(playback_token);
+
+  $('#rdio').rdio("<%= Rdio.streaming_token %>");
+
+  $('#rdio').on('ready.rdio', function() {
+    console.log("ready to play");
+  });
+});

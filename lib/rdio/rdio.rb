@@ -23,11 +23,10 @@ class Rdio
     return response.body
   end
 
-  def self.api_keys(key, secret, rdio_domain)
+  def self.api_keys(key, secret, streaming_token)
     @key = key
     @secret = secret
-    # @rdio_domain = rdio_domain.nil? ? 'localhost' : rdio_domain
-    # debugger
+    @streaming_token = streaming_token
   end
 
   def self.key
@@ -38,8 +37,7 @@ class Rdio
     @secret
   end
 
-  def self.rdio_domain
-    @rdio_domain
+  def self.streaming_token
+    @streaming_token
   end
-
 end

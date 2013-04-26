@@ -14,23 +14,4 @@
 // = require jquery_ujs
 // = require bootstrap
 // = require_tree .
-// = require_self
-
-$(function() {
-
-// var playback_token = @rdio.getPlaybackToken(domain: "#{Rdio.rdio_domain}");
-// console.log("getPlaybackToken: [" + playback_token + ']');
-
-  // var playback_token = production ? 
-  // $('#rdio').rdio(playback_token);
-
-  $('#rdio').rdio("GBZRel85_____3pkdXMyeXQ5eHVteWdqeHd4bW1kZndra2Nyb3dkLWRqLmhlcm9rdWFwcC5jb22uEWI27Fx-vWZLw-Y0k9wq");
-  // $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
-
-
-  $('#rdio').on('ready.rdio', function() {
-    console.log("ready to play");
-  });
-});
-
 
