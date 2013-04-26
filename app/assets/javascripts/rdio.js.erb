@@ -6,8 +6,8 @@ $(function() {
   // var playback_token = production ? 
   // $('#rdio').rdio(playback_token);
 
-  $('#rdio').rdio("<%= Rdio.streaming_token %>");
- console.log("Rdio.streaming_token : <%= Rdio.streaming_token %>");
+  $('#rdio').rdio("<%= ENV['CROWDDJ_RDIO_STREAMING_TOKEN'] %>");
+ console.log("Rdio.streaming_token : <%= ENV['CROWDDJ_RDIO_STREAMING_TOKEN'] %>");
   $('#rdio').on('ready.rdio', function() {
     console.log("ready to play");
     console.log("Rdio.streaming_token : <%= Rdio.streaming_token %>");
