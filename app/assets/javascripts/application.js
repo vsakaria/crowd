@@ -17,7 +17,16 @@
 // = require_self
 
 $(function() {
-  $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
+
+// var playback_token = @rdio.getPlaybackToken(domain: "#{Rdio.rdio_domain}");
+// console.log("getPlaybackToken: [" + playback_token + ']');
+
+  // var playback_token = production ? 
+  // $('#rdio').rdio(playback_token);
+
+  $('#rdio').rdio("GBZReaPd_____3pkdXMyeXQ5eHVteWdqeHd4bW1kZndra2Nyb3dkLWRqLmhlcm9rdWFwcC5jb20ng_nNie-3N3N583R9pVeh\=");
+  // $('#rdio').rdio("GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=");
+
 
   $('#rdio').on('ready.rdio', function() {
     console.log("ready to play");

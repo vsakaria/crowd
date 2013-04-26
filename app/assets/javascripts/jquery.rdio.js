@@ -818,6 +818,7 @@ var swfobject = function() {
       'domain': document.domain,
       'listener': listener_name
     };
+    console.log("jquery.rdio.js FLASHVARS: [" + playbackToken + '], [' + document.domain + '], [' + listener_name) + ']';
     var params = {'allowScriptAccess': 'always'};
     var attributes = {};
     var o = {'embed': null};

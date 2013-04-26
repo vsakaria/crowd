@@ -9,6 +9,7 @@ PATH = '/1/'
 
 class Rdio
   def initialize
+    # @consumer = OAuth::Consumer.new Rdio.key, Rdio.secret, Rdio.rdio_domain, {:site => SITE}
     @consumer = OAuth::Consumer.new Rdio.key, Rdio.secret, {:site => SITE}
     @consumer.http.read_timeout = 600 # ten-minute timeout, thanks
     @access_token = OAuth::AccessToken.new @consumer
@@ -22,9 +23,11 @@ class Rdio
     return response.body
   end
 
-  def self.api_keys(key, secret)
+  def self.api_keys(key, secret, rdio_domain)
     @key = key
     @secret = secret
+    # @rdio_domain = rdio_domain.nil? ? 'localhost' : rdio_domain
+    # debugger
   end
 
   def self.key
@@ -33,6 +36,10 @@ class Rdio
 
   def self.secret
     @secret
+  end
+
+  def self.rdio_domain
+    @rdio_domain
   end
 
 end
