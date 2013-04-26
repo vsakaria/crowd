@@ -107,7 +107,9 @@ ul.sdt_menu li div.sdt_box a:hover{
 }
 
 div.content{
-  margin-bottom: 400px;
+  margin-top: 0px;
+  margin-bottom: 200px;
+  width: 100%;
 
 }
 
@@ -115,6 +117,3 @@ img#main_image{
   height: 200px;
 }
 
-div#main_image_cont{
-
-}
