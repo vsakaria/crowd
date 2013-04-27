@@ -1,7 +1,3 @@
-url = URI.parse('http://developer.echonest.com/api/v4/artist/hotttnesss?api_key=FILDTEOIK2HBORODV&name=dr+dre&format=json')
+A team project with 3 members.
 
-var1
-var2
-var3
-
-Net::HTTP.get(URI.parse())
+My contribution consisted of the testing of a searches model, construction of the searches model and controller, setting upif the Rdio SWFObject, The Rdio callback and the creation of the Rdio player.
